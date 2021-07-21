@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
+  max-width: 780px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 84px auto 0px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.blog-filter-group {
+  display: flex;
+  margin: 0 0 32px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blog-filter-group > .input {
+  margin-right: 8px;
 }
+
+.blog-list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.blog__item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 5%);
+  margin:0 0 16px;
+  padding: 24px;
+}
+
+.blog__item > h2 {
+  font-size: 24px;
+  margin:0 0 8px;
+}
+
+.blog__item > p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.blog__item > span {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.select, .input {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid grey;
+  padding: 12px 24px;
+  border-radius: 5px;
+}
+
+.form {
+  padding: 32px;
+  height: 370px;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 5%); 
+}
+.form > textarea.input {
+   height: 120px;
+}
+
+.form > .input{
+  margin-bottom: 14px; 
+  width: 100%;
+}
+
+.form > .btn {
+  margin: auto 0 0;
+}
+ 
