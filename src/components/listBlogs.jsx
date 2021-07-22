@@ -111,15 +111,18 @@ const ListBlogs = (props) => {
 
             <div className="blog-list">
                 {listItems}
+                { listItems.length == 0 && (<h1>No Records Found</h1> )}
             </div>
-            <Pagination
+            {
+             listItems.length !==0 &&
+            (<Pagination
                 activePage={activePage}
                 itemsCountPerPage={ITEMS_PER_PAGE}
                 totalItemsCount={totalPage}
                 pageRangeDisplayed={5}
                 hideFirstLastPages={true}
                 onChange={handlePageChange}
-            />
+            />)  }
         </div>
     );
 
