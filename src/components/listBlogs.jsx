@@ -20,7 +20,7 @@ const ListBlogs = (props) => {
     },[blogs])
 
     const listItems = blogs.map((blog)=>{
-        let location = `/view-blog/${blog.id}`;
+        let location = `/blog/${blog.id}`;
         return (
             <Link to={location} key={blog.id}>
                 <div className="blog__item">
@@ -66,15 +66,4 @@ const ListBlogs = (props) => {
     );
 
 }
-
-const mapStateToProps = (state) => {
-    return {
-        blogs: state.blogs
-    }
-}
-
-// const mapDispatchToProps = {
-//     selectBlog: selectBlog
-// }
-
 export default ListBlogs

@@ -1,4 +1,5 @@
 import CreateBlog  from './components/createBlog'
+import EditBlog  from './components/editBlog'
 import ListBlog from './components/listBlogs'
 import DetailBlog from './components/detailBlog'
 // import App from './App.css'
@@ -17,8 +18,11 @@ function App() {
             <Route path="/create">
               <CreateBlog/>
             </Route>
-            <Route path="/view-blog/:id">
+            <Route path="/blog/:id">
               <DetailBlog/>
+            </Route>
+            <Route path="/edit-blog/:id">
+              <EditBlog/>
             </Route>
           </Switch>
       </div>
