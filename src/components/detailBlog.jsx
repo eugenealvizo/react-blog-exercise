@@ -29,13 +29,15 @@ const DetailBlog = ()=> {
         history.push(`/edit-blog/${id}`);
     }
     return (
-        // Update UI
-        <div className="container">
+
+        <div className="container form">
             <h1>{blog.title}</h1>
             <p>{blog.content}</p>
             {/* Delete UI -> Modal */}
-            <button onClick={deleteHandler}>Delete</button>
-            <button onClick={editHandler}>Edit</button>
+            <div className="form__controls-group">
+                <button className="btn" onClick={deleteHandler}>Delete</button>
+                <button className="btn" onClick={editHandler}>Edit</button>
+            </div>
         </div>
     );
 }
