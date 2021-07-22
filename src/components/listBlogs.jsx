@@ -97,17 +97,18 @@ const ListBlogs = (props) => {
             <h1>Blogify</h1>
             {/* TODO STYLING */}
           
-
-            <div className="blog-filter-group">
-              
-                <input type="text" className="input" placeholder="Search for Blog" ref={searchView} onChange={handlerSearch}/>
-                <select className="select" onChange={handlerSort}>
-                    <option value="1">Alphabetically (A-Z)</option>
-                    {/* TODO RECENCY */}
-                    <option value="2">By Most Recent</option> 
-                </select>
-                <Link className="btn"  to="/create">Create</Link>
+            <div class="blog-action-group"> 
+                <div className="blog-filter-group">
+                    <input type="text" className="input" placeholder="Search for Blog" ref={searchView} onChange={handlerSearch}/>
+                    <select className="select" onChange={handlerSort}>
+                        <option value="1">Alphabetically (A-Z)</option>
+                        {/* TODO RECENCY */}
+                        <option value="2">By Most Recent</option> 
+                    </select>
+                </div>
+                <Link className="btn" to="/create">Create</Link>
             </div>
+
             <div className="blog-list">
                 {listItems}
             </div>

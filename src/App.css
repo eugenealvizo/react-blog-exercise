@@ -6,10 +6,14 @@
   margin: 84px auto 0px;
 }
 
-
+.blog-action-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
 .blog-filter-group {
   display: flex;
-  margin: 0 0 32px auto;
 }
 
 .blog-filter-group > .input {
@@ -25,7 +29,7 @@
 
 .blog__item {
   display: flex;
-  width: 100%;
+
   flex-direction: column;
   justify-content: space-evenly;
   box-shadow: 0 8px 32px rgb(0 0 0 / 5%);
@@ -112,4 +116,50 @@
 }
 .pagination > li.active {
   background-color: grey;
+}
+
+
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000000d6;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.modal.modal--close {
+  display: none;
+}
+
+.modal > .modal__content {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  background: white;
+  margin: 0 auto;
+  align-items: center;
+  padding: 24px;
+}
+
+.modal__content > h1 {
+  font-size: 24px;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.modal__controls {
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.modal__controls > .btn + .btn {
+  margin-left: 8px;
 }
