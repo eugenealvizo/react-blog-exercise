@@ -13,6 +13,9 @@ const DetailBlog = ()=> {
 
     useEffect(()=>{
         let storedBlog = store.getCurrentBlog(id);
+        if(!storedBlog) {
+            history.replace('/404');
+        }
         setBlog(storedBlog);
     },[]);
 

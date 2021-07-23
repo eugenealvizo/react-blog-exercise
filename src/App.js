@@ -2,8 +2,9 @@ import CreateBlog  from './components/createBlog'
 import EditBlog  from './components/editBlog'
 import ListBlog from './components/listBlogs'
 import DetailBlog from './components/detailBlog'
+import NotFound from './components/notfound'
 // import App from './App.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
             <Route path="/edit-blog/:id">
               <EditBlog/>
             </Route>
+            <Route path="/404">
+              <NotFound/>
+            </Route>
+            <Redirect to="/404" />
           </Switch>
       </div>
     </Router>

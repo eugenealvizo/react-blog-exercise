@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Store from '../store/'
 import Pagination from "react-js-pagination";
 
-const ITEMS_PER_PAGE = 3;
+const ITEMS_PER_PAGE = 6;
 
 
 const ListBlogs = (props) => {
@@ -60,7 +60,8 @@ const ListBlogs = (props) => {
             console.log(sortedItem)
             updatePaginate([...sortedItem], activePage, ITEMS_PER_PAGE);
         }else {
-            //TODO
+            sortedItem.sort((a,b) => (a.date - b.date));
+            updatePaginate([...sortedItem], activePage, ITEMS_PER_PAGE);
         }
     }
     // EVENT Handlers
